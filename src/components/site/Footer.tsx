@@ -46,7 +46,6 @@ export function Footer() {
         </div>
         <div className="mt-12 pt-6 border-t border-foreground/10 text-sm text-muted-foreground flex flex-wrap justify-between gap-3">
           <div>© {new Date().getFullYear()} LaaxxKart by LAAXX Consulting Pvt Ltd. All rights reserved.</div>
-          <div>Made with love for Indian businesses</div>
         </div>
       </div>
     </footer>
