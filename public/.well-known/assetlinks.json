@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.cmd.laaxxKart",
+      "sha256_cert_fingerprints": [
+        "E3:FC:BD:49:B6:D4:56:22:F3:2B:43:3D:7C:51:89:DA:70:B1:59:FE:0C:B9:E9:28:FB:03:20:72:CA:AE:84:C9"
+      ]
+    }
+  }
+]
