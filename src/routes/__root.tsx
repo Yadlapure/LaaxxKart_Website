@@ -139,6 +139,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
     ],
 
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "LAAXX Kart",
+          alternateName: ["LaaxxKart", "LAAXXKART", "Laaxx Kart", "laaxxkart.shop"],
+          url: "https://laaxxkart.shop/",
+        }),
+      },
+    ],
+
     links: [
       {
         rel: "canonical",
