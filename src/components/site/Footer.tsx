@@ -1,5 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { Linkedin, Instagram, Facebook } from "lucide-react";
+import PlaystoreImage from "@/assets/google-play.png";
+import ApplestoreImage from "@/assets/apple-store.png";
+import { motion } from "framer-motion";
 
 export function Footer() {
   return (
@@ -15,8 +18,8 @@ export function Footer() {
               <span className="font-bold text-xl">LaaxxKart</span>
             </div>
             <p className="text-muted-foreground max-w-md leading-relaxed">
-              Connecting businesses with quality frozen foods and groceries through a future-ready,
-              temperature-controlled supply chain.
+              A one-stop B2B supply platform for groceries, FMCG and frozen products — wholesale
+              pricing, easy ordering and reliable delivery for businesses.
             </p>
             <div className="mt-6 text-sm text-muted-foreground leading-relaxed">
               <div className="font-semibold text-foreground">LAAXX Consulting Pvt Ltd</div>
@@ -26,6 +29,36 @@ export function Footer() {
               <br />
               <span className="opacity-80">CIN:</span> U70200KA2025PTC208853 ·{" "}
               <span className="opacity-80">Mob:</span> +91 8904880530
+            </div>
+            {/* App Download Buttons */}
+            <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
+              {/* Google Play */}
+              <motion.a
+                whileHover={{ y: -3, scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
+                href="https://play.google.com/store/apps/details?id=com.cmd.laaxxKart"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-14 w-full sm:w-52 items-center justify-center"
+              >
+                <img
+                  src={PlaystoreImage}
+                  alt="Get it on Google Play"
+                  className="w-[180px] sm:w-[250px] h-auto object-contain"
+                />
+              </motion.a>
+
+              {/* Apple App Store */}
+              <motion.div
+                whileHover={{ y: -3, scale: 1.03 }}
+                className="inline-flex h-14 w-full sm:w-52 items-center justify-center"
+              >
+                <img
+                  src={ApplestoreImage}
+                  alt="Download on the App Store"
+                  className="h-full sm:w-[250px] object-contain"
+                />
+              </motion.div>
             </div>
           </div>
           <div>
@@ -42,8 +75,8 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/#solutions" className="hover:text-foreground">
-                  Solutions
+                <a href="/#segments" className="hover:text-foreground">
+                  Who We Serve
                 </a>
               </li>
               <li>
@@ -64,11 +97,6 @@ export function Footer() {
               <li>
                 <Link to="/terms" className="hover:text-foreground">
                   Terms & Conditions
-                </Link>
-              </li>
-              <li>
-                <Link to="/account-deletion" className="hover:text-foreground">
-                  Account Deletion
                 </Link>
               </li>
             </ul>
@@ -101,6 +129,7 @@ export function Footer() {
           <div>
             © {new Date().getFullYear()} LaaxxKart by LAAXX Consulting Pvt Ltd. All rights reserved.
           </div>
+          <div>Made with love for Indian businesses</div>
         </div>
       </div>
     </footer>

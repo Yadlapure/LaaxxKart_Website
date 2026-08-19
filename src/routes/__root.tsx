@@ -76,24 +76,95 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   head: () => ({
     meta: [
       { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "LaaxxKart — Frozen Foods & Groceries Supply Chain" },
-      { name: "description", content: "LaaxxKart connects retailers, restaurants, hotels and wholesalers with quality frozen foods and groceries through a temperature-controlled bulk supply chain." },
-      { name: "author", content: "LaaxxKart" },
-      { property: "og:title", content: "LaaxxKart — Frozen Foods & Groceries Supply Chain" },
-      { property: "og:description", content: "Bulk sourcing, cold-chain distribution and delivery for businesses." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@LaaxxKart" },
+
+      {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1",
+      },
+
+      {
+        title: "LaaxxKart | B2B Grocery, FMCG & Frozen Food Supplier",
+      },
+
+      {
+        name: "description",
+        content:
+          "LaaxxKart is a B2B grocery, FMCG and frozen food supplier connecting manufacturers and distributors with retail stores, supermarkets, restaurants, hotels and wholesalers.",
+      },
+
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+
+      {
+        name: "author",
+        content: "LaaxxKart",
+      },
+
+      {
+        property: "og:title",
+        content: "LaaxxKart | B2B Grocery, FMCG & Frozen Food Supplier",
+      },
+
+      {
+        property: "og:description",
+        content:
+          "One-stop B2B supply solution for groceries, FMCG and frozen products for retailers, supermarkets, restaurants, hotels and wholesalers.",
+      },
+
+      {
+        property: "og:type",
+        content: "website",
+      },
+
+      {
+        property: "og:url",
+        content: "https://laaxxkart.shop/",
+      },
+
+      {
+        property: "og:image",
+        content: "https://laaxxkart.shop/og-image.png",
+      },
+
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+
+      {
+        name: "twitter:site",
+        content: "@LaaxxKart",
+      },
     ],
+
     links: [
+      {
+        rel: "canonical",
+        href: "https://laaxxkart.shop/",
+      },
+
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" },
+
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
+
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,

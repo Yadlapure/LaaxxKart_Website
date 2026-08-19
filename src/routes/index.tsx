@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/site/Navbar";
 import { Hero } from "@/components/site/Hero";
+import { Categories } from "@/components/site/Categories";
 import { SupplyChain } from "@/components/site/SupplyChain";
 import { Features } from "@/components/site/Features";
 import { Products } from "@/components/site/Products";
@@ -16,13 +17,21 @@ import { SmoothScroll } from "@/components/site/SmoothScroll";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "LaaxxKart — Frozen Foods & Groceries B2B Supply Chain" },
-      { name: "description", content: "LaaxxKart connects retailers, restaurants and wholesalers with quality frozen foods and groceries through a temperature-controlled bulk supply chain." },
-      { property: "og:title", content: "LaaxxKart — Frozen Foods & Groceries B2B Supply Chain" },
-      { property: "og:description", content: "Bulk sourcing, cold-chain distribution and delivery for businesses across India." },
-      { property: "og:url", content: "/" },
+      { title: "LaaxxKart | B2B Grocery, FMCG & Frozen Food Supplier" },
+      {
+        name: "description",
+        content:
+          "LaaxxKart is a B2B supply platform for groceries, FMCG and frozen products — wholesale pricing, one-stop ordering and scheduled delivery for businesses.",
+      },
+      { property: "og:title", content: "LaaxxKart — Groceries, FMCG & Frozen B2B Supply" },
+      {
+        property: "og:description",
+        content:
+          "One-stop groceries, FMCG and frozen supply for retailers, restaurants, hotels and wholesalers.",
+      },
+      { property: "og:url", content: "https://laaxxkart.shop/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://laaxxkart.shop/" }],
   }),
   component: Index,
 });
@@ -34,6 +43,7 @@ function Index() {
       <Navbar />
       <main>
         <Hero />
+        <Categories />
         <Stats />
         <SupplyChain />
         <Features />
