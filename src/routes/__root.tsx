@@ -146,7 +146,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "LAAXX Kart",
-          alternateName: ["LaaxxKart", "LAAXXKART", "Laaxx Kart", "laaxxkart.shop"],
+          alternateName: ["LaaxxKart", "LAAXXKART", "Laaxx Kart", "laaxxkart.shop","laaxxkart"],
           url: "https://laaxxkart.shop/",
         }),
       },
