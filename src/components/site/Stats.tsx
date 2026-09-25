@@ -4,7 +4,7 @@ import { Counter } from "./Counter";
 const stats = [
   { value: 5000, suffix: "+", label: "Products Available" },
   { value: 100, suffix: "+", label: "Business Partners" },
-  { value: 50, suffix: "+", label: "Cities Served" },
+  { value: 2, suffix: "", label: "Cities Served" },
   { value: 99, suffix: "%", label: "On-Time Delivery" },
 ];
 

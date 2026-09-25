@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 
 const t = [
-  { name: "Rohan Mehta", role: "Owner, FreshMart Stores", quote: "LaaxxKart transformed our inventory ops. Bulk orders arrive on time, every time — and the cold chain is rock solid." },
-  { name: "Priya Iyer", role: "Procurement, Spice Route Restaurant", quote: "From frozen seafood to spices, one platform handles it all. Competitive pricing and great service." },
-  { name: "Arjun Shah", role: "Distributor, Karnataka", quote: "Onboarding was seamless. The dashboard, tracking, and partner support make scaling so much easier." },
+  { name: "Rohan Mehta", role: "", quote: "LaaxxKart transformed our inventory ops. Bulk orders arrive on time, every time — and the cold chain is rock solid." },
+  { name: "Priya Iyer", role: "", quote: "From frozen seafood to spices, one platform handles it all. Competitive pricing and great service." },
+  { name: "Arjun Shah", role: "", quote: "Onboarding was seamless. The dashboard, tracking, and partner support make scaling so much easier." },
 ];
 
 export function Testimonials() {
