@@ -1,6 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Image } from "@radix-ui/react-avatar";
+import logo from "@/assets/logo.png";
 
 const links = [
   { label: "Products", href: "/#products" },
@@ -28,8 +30,12 @@ export function Navbar() {
           className={`flex items-center justify-between rounded-xl px-4 sm:px-5 py-3 transition-all ${scrolled ? "glass" : "bg-transparent"}`}
         >
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="h-9 w-9 rounded-lg brand-gradient flex items-center justify-center shadow-[var(--shadow-soft)] group-hover:scale-110 transition">
-              <span className="text-primary-foreground font-bold text-lg">LK</span>
+            <div className="h-9 w-9 rounded-lg flex items-center justify-center] group-hover:scale-110 transition">
+              <img
+                src={logo}
+                alt="LaaxxKart logo"
+                className="h-full w-full object-contain"
+              />
             </div>
             <span className="font-bold text-lg">LaaxxKart</span>
           </Link>
