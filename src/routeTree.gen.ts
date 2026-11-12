@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SalesmanDeliveryPrivacyRouteImport } from './routes/salesman-delivery-privacy'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as AccountDeletionRouteImport } from './routes/account-deletion'
@@ -24,6 +25,11 @@ const TermsRoute = TermsRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SalesmanDeliveryPrivacyRoute = SalesmanDeliveryPrivacyRouteImport.update({
+  id: '/salesman-delivery-privacy',
+  path: '/salesman-delivery-privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
@@ -52,6 +58,7 @@ export interface FileRoutesByFullPath {
   '/account-deletion': typeof AccountDeletionRoute
   '/privacy': typeof PrivacyRoute
   '/robots.txt': typeof RobotsDottxtRoute
+  '/salesman-delivery-privacy': typeof SalesmanDeliveryPrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
 }
@@ -60,6 +67,7 @@ export interface FileRoutesByTo {
   '/account-deletion': typeof AccountDeletionRoute
   '/privacy': typeof PrivacyRoute
   '/robots.txt': typeof RobotsDottxtRoute
+  '/salesman-delivery-privacy': typeof SalesmanDeliveryPrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
 }
@@ -69,6 +77,7 @@ export interface FileRoutesById {
   '/account-deletion': typeof AccountDeletionRoute
   '/privacy': typeof PrivacyRoute
   '/robots.txt': typeof RobotsDottxtRoute
+  '/salesman-delivery-privacy': typeof SalesmanDeliveryPrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
 }
@@ -79,6 +88,7 @@ export interface FileRouteTypes {
     | '/account-deletion'
     | '/privacy'
     | '/robots.txt'
+    | '/salesman-delivery-privacy'
     | '/sitemap.xml'
     | '/terms'
   fileRoutesByTo: FileRoutesByTo
@@ -87,6 +97,7 @@ export interface FileRouteTypes {
     | '/account-deletion'
     | '/privacy'
     | '/robots.txt'
+    | '/salesman-delivery-privacy'
     | '/sitemap.xml'
     | '/terms'
   id:
@@ -95,6 +106,7 @@ export interface FileRouteTypes {
     | '/account-deletion'
     | '/privacy'
     | '/robots.txt'
+    | '/salesman-delivery-privacy'
     | '/sitemap.xml'
     | '/terms'
   fileRoutesById: FileRoutesById
@@ -104,6 +116,7 @@ export interface RootRouteChildren {
   AccountDeletionRoute: typeof AccountDeletionRoute
   PrivacyRoute: typeof PrivacyRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
+  SalesmanDeliveryPrivacyRoute: typeof SalesmanDeliveryPrivacyRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
 }
@@ -122,6 +135,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/salesman-delivery-privacy': {
+      id: '/salesman-delivery-privacy'
+      path: '/salesman-delivery-privacy'
+      fullPath: '/salesman-delivery-privacy'
+      preLoaderRoute: typeof SalesmanDeliveryPrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/robots.txt': {
@@ -160,6 +180,7 @@ const rootRouteChildren: RootRouteChildren = {
   AccountDeletionRoute: AccountDeletionRoute,
   PrivacyRoute: PrivacyRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
+  SalesmanDeliveryPrivacyRoute: SalesmanDeliveryPrivacyRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
 }
